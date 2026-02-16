@@ -4,17 +4,14 @@ import java.sql.*;
 
 public class DbUtil {
 
-    private static String DB_URL = "jdbc:mysql://localhost:3306/products_ex?useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
-    private static String DB_URL1 = "jdbc:mysql://localhost:3306/cinemas_ex?useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
+    private static String DB_URL = "jdbc:mysql://localhost:3306/workshop2?useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
     private static String DB_USER = "root";
-    private static String DB_PASS = "Islandia2025!";
+    private static String DB_PASS = "######";
 
     public static Connection connect() throws SQLException {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
     }
-    public static Connection connect1() throws SQLException {
-        return DriverManager.getConnection(DB_URL1, DB_USER, DB_PASS);
-    }
+
 
     public static void insert(Connection conn, String query, String... params) {
         try ( PreparedStatement statement = conn.prepareStatement(query)) {

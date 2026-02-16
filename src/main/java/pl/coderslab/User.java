@@ -3,9 +3,19 @@ package pl.coderslab;
 public class User {
 
     private Long id;
-    private String name;
+    private String username;
     private String password;
     private String email;
+    public User() {
+
+    }
+    public User(Long id, String email, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+
+    }
 
     public Long getId() {
         return id;
@@ -15,12 +25,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -43,7 +53,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
